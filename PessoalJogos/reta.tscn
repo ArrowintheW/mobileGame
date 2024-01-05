@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dah22mc7123n3"]
+
+[ext_resource type="Texture2D" uid="uid://4c2ajhy81gpy" path="res://imgs/reta.png" id="1_hqkjm"]
+
+[node name="reta" type="Sprite2D"]
+scale = Vector2(2.56, 2.56)
+texture = ExtResource("1_hqkjm")

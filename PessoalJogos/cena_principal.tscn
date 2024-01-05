@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b44lucy70stxw"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_a8e46"]
+[ext_resource type="Script" path="res://cena_principal.gd" id="1_iy7mp"]
+[ext_resource type="Texture2D" uid="uid://otij5tg36hyo" path="res://imgs/DALL·E 2023-12-29 01.31.32 - A photo of a white fur monster standing in a purple room.png" id="2_ac4j7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d37eq"]
+size = Vector2(33, 32)
+
+[node name="cenaPrincipal" type="Node2D"]
+script = ExtResource("1_iy7mp")
+
+[node name="player" type="CharacterBody2D" parent="."]
+top_level = true
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_a8e46")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+shape = SubResource("RectangleShape2D_d37eq")
+
+[node name="Sprite2D" type="Sprite2D" parent="player"]
+position = Vector2(0, -1)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_ac4j7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(288, 512)
